@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_94010/fast"
+/usr/bin/make -f CMakeFiles/cmTC_94010.dir/build.make CMakeFiles/cmTC_94010.dir/build
+make[1]: Entering directory '/home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_94010.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_94010.dir/CheckSymbolExists.c.o   -c /home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_94010
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94010.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_94010.dir/CheckSymbolExists.c.o  -o cmTC_94010 -rdynamic 
+CMakeFiles/cmTC_94010.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_94010.dir/build.make:97: recipe for target 'cmTC_94010' failed
+make[1]: *** [cmTC_94010] Error 1
+make[1]: Leaving directory '/home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_94010/fast' failed
+make: *** [cmTC_94010/fast] Error 2
+
+File /home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9bd1d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9bd1d.dir/build.make CMakeFiles/cmTC_9bd1d.dir/build
+make[1]: Entering directory '/home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9bd1d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9bd1d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9bd1d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bd1d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9bd1d.dir/CheckFunctionExists.c.o  -o cmTC_9bd1d -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9bd1d.dir/build.make:97: recipe for target 'cmTC_9bd1d' failed
+make[1]: *** [cmTC_9bd1d] Error 1
+make[1]: Leaving directory '/home/lyy/from_0_to_1_for_slam/homework_14/fliter/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9bd1d/fast' failed
+make: *** [cmTC_9bd1d/fast] Error 2
+
+
